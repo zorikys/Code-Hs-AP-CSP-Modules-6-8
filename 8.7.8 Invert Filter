@@ -1,0 +1,11 @@
+def invert_pixel(pixel):
+    # Invert each color channel
+    red = 255 - pixel[0]
+    green = 255 - pixel[1]
+    blue = 255 - pixel[2]
+    
+    # Return the new pixel as a tuple
+    return (red, green, blue)
+    
+    
+    #
