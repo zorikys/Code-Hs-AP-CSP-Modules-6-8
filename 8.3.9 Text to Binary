@@ -1,0 +1,22 @@
+"""
+This program encodes user input into binary data!
+"""
+
+# Converts a given decimal value into an 8-bit binary value
+def decimal_to_binary(decimal_value):
+    binary_value = bin(decimal_value)[2:]  # Convert decimal to binary string, remove '0b'
+    while len(binary_value) < 8:          # Pad with leading zeros to ensure 8 bits
+        binary_value = "0" + binary_value
+    return binary_value00111 00100 01011 01011 01110 11010 10110 01110 10001 01011 00011
+
+# Converts text to a concatenated binary string
+def text_to_binary(text):
+    result = ""
+    for char in text:
+        result += decimal_to_binary(ord(char))  # Convert each character to 8-bit binary
+    return result
+
+# Main program
+text = input("Input the string you would like to encode: ")
+binary = text_to_binary(text)
+print(binary)
