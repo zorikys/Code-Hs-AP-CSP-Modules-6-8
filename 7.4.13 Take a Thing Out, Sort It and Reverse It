@@ -1,0 +1,38 @@
+def remove_sort_reverse(lst):
+    # Remove all occurrences of "eggplant"
+    while "eggplant" in lst:
+        lst.remove("eggplant")
+    
+    # Sort the list
+    lst.sort()
+    
+    # Reverse the list
+    lst.reverse()
+    
+    return lst
+
+# Example runs
+print(remove_sort_reverse(["eggplant", "apple", "zucchini", "rambutan", "grapefruit"]))
+# => ["zucchini", "rambutan", "grapefruit", "apple"]
+
+print(remove_sort_reverse(["men in black", "fresh prince of bel-air", "hitch", "eggplant"]))
+# => ["men in black", "hitch", "fresh prince of bel-air"]
+def remove_sort_reverse(lst):
+    # Remove all occurrences of "eggplant"
+    while "eggplant" in lst:
+        lst.remove("eggplant")
+    
+    # Sort the list
+    lst.sort()
+    
+    # Reverse the list
+    lst.reverse()
+    
+    return lst
+
+# Example runs
+print(remove_sort_reverse(["eggplant", "apple", "zucchini", "rambutan", "grapefruit"]))
+# => ["zucchini", "rambutan", "grapefruit", "apple"]
+
+print(remove_sort_reverse(["men in black", "fresh prince of bel-air", "hitch", "eggplant"]))
+# => ["men in black", "hitch", "fresh prince of bel-air"]
