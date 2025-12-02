@@ -1,0 +1,18 @@
+# Create an empty list
+test = []
+
+# Append an integer, a string, and a boolean
+test.append(3)
+test.append("hello")
+test.append(False)
+
+# Print out each index individually
+for i in range(len(test)):
+    print(test[i])
+
+# Remove the number 3 and False
+test.remove(3)
+test.remove(False)
+
+# Print the final list
+print(test)
