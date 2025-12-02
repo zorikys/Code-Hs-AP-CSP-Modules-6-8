@@ -1,0 +1,14 @@
+def remove_blue():
+    # Loop through every pixel in the image
+    for x in range(image.get_width()):
+        for y in range(image.get_height()):
+            # Get the current pixel
+            pixel = image.get_pixel(x, y)
+            
+            # Set blue to 0
+            red = pixel[0]
+            green = pixel[1]
+            blue = 0
+            
+            # Update the pixel with the new values
+            image.set_pixel(x, y, (red, green, blue))
