@@ -1,0 +1,11 @@
+# Enter your code here# Create a list of 4 favorite movies
+movies = ["Inception", "Interstellar", "Avengers", "Jurassic Park"]
+
+# Print the 0th element
+print(movies[0])
+
+# Change the 0th element to "Star Wars"
+movies[0] = "Star Wars"
+
+# Print the 0th element again
+print(movies[0])
