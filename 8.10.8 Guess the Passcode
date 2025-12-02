@@ -1,0 +1,35 @@
+import random
+
+# Global variable to count guesses
+num_guesses = 0
+
+# Checks whether the given guess passcode is correct
+def is_correct(guess_code, correct_code):
+    global num_guesses
+    num_guesses += 1
+    return guess_code == correct_code
+
+# Generates a random 4-digit passcode
+def generate_random_passcode():
+    random_passcode = ""
+    for _ in range(4):
+        random_passcode += str(random.randint(0, 9))
+    return int(random_passcode)
+
+# The secret passcode
+secret_passcode = generate_random_passcode()
+
+# Function that guesses every possible passcode using nested loops
+def guess_every_possible_passcode():
+    for d1 in range(10):
+        for d2 in range(10):
+            for d3 in range(10):
+                for d4 in range(10):
+                    guess = int(f"{d1}{d2}{d3}{d4}")
+                    if is_correct(guess, secret_passcode):
+                        print("Correctly guessed passcode:", str(guess).zfill(4))
+                        print("It took", num_guesses, "guesses to find the correct passcode.")
+                        return  # Stop once found
+
+# Call the function
+guess_every_possible_passcode() 
